@@ -17,7 +17,7 @@ public class Main
                 System.out.println("\n la password deve avere almeno: \n-12 caratteri \n-una maiuscola \n-una minuscola \n-un numero \n-un carattere speciale \n");
 
         }while(!isPrivate(passw));
-        System.out.println("password sicura");
+        System.out.println("\npassword sicura");
     }
 
     private static boolean isPrivate(String password){
@@ -30,27 +30,23 @@ public class Main
         //codice ASCII
 
         for (int i=0; i<password.length();i++){
+            
             if (password.charAt(i)>=65 && password.charAt(i)<=90) {
                 maiuscola = true;
             }
-        }
 
-        for (int i=0; i<password.length();i++) {
             if (password.charAt(i) >= 97 && password.charAt(i)<=122){
                 minuscola = true;
             }
-        }
 
-        for (int i=0; i<password.length();i++) {
             if (password.charAt(i)>=48 && password.charAt(i)<=57){
                 numeri = true;
             }
-        }
 
-        for (int i=0; i<password.length();i++) {
-            if (password.charAt(i)>=33 && password.charAt(i)<=47){
+            if (password.charAt(i)>=33 && password.charAt(i)<=46){
                 charSpeciali = true;
             }
+            
         }
 
         if (password.length()>=12)
